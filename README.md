@@ -1,4 +1,7 @@
-<h1 align="center">Welcome to Laravel Youtube Downloader 👋</h1>
+<div align="center">
+<img src="public/assets/img/icons/android-chrome-512x512.png" alt="Logo" width="80" height="80">
+<h3>Laravel Youtube Downloader 👋</h1>
+
 <p>
   <a href="#" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
@@ -7,6 +10,7 @@
     <img alt="Twitter: IhsanDevs" src="https://img.shields.io/twitter/follow/IhsanDevs.svg?style=social" />
   </a>
 </p>
+</div>
 
 > Download YouTube videos in MP4 and MP3 formats easily
 
