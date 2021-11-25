@@ -21,6 +21,9 @@ class Form extends Component
     public function download()
     {
         try {
+            $this->reset([
+                'videoId', 'description', 'title', 'videoLinks', 'otherLinks', 'audioLinks', 'data'
+            ]);
             $this->validate();
             $youtube = new YouTubeDownloader;
             $getVideoInfo = $youtube->getDownloadLinks($this->url);
@@ -45,11 +48,9 @@ class Form extends Component
                 'videos' => $this->videoLinks,
                 'audios' => $getVideoInfo->getAudioFormats()
             ];
-            // dd($this->data);
             session()->flash('message', 'Successfully to get video information.');
 
-            return view('index', $this->data);
-            // return redirect()->route('index');
+            return view('index');
         } catch (YouTubeException $e) {
             session()->flash('error', empty($e->getMessage()) ? 'Failure to get video data.Please check the link you entered.' : $e->getMessage());
         }
