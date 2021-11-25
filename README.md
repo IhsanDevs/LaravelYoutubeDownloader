@@ -1,6 +1,6 @@
 <div align="center">
 <img src="public/assets/img/icons/android-chrome-512x512.png" alt="Logo" width="80" height="80">
-<h3>Laravel Youtube Downloader 👋</h1>
+<h3>Laravel Youtube Downloader</h1>
 
 <p>
   <a href="#" target="_blank">
