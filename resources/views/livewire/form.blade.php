@@ -52,6 +52,7 @@
                     <button class="btn btn-success" aria-expanded="false" data-bs-toggle="dropdown" type="button">
                         <i class="fa fa-video-camera"></i> Download video
                     </button>
+                    {{-- @dd($videoLinks) --}}
                     <div class="dropdown-menu dropdown-menu-dark">
                         @foreach ($videoLinks as $video)
                             @if (is_array($video))
@@ -77,22 +78,20 @@
                         @endforeach
                     </div>
                 </div>
-
-
             </div>
-        </div>
-    @elseif (session()->has('error'))
-        <div class="mt-2 col col-12">
-            <div class="alert alert-danger alert-dismissible" role="alert"><button class="btn-close" type="button"
-                    data-bs-dismiss="alert" aria-label="Close"></button><span>{{ session('error') }}</span></div>
-        </div>
-
-    @else
-        <div class="mt-4 text-center row" style="height: 9rem !important;">
-            <div class="col d-flex justify-content-center align-items-center" style="background: #eeeeee;">
-                <h1 class="text-black-50">There is no data here <i class="fa fa-frown-o" aria-hidden="true"></i>
-                </h1>
+        @elseif (session()->has('error'))
+            <div class="mt-2 col col-12">
+                <div class="alert alert-danger alert-dismissible" role="alert"><button class="btn-close"
+                        type="button" data-bs-dismiss="alert"
+                        aria-label="Close"></button><span>{{ session('error') }}</span></div>
             </div>
-        </div>
+
+        @else
+            <div class="mt-4 text-center row" style="height: 9rem !important;">
+                <div class="col d-flex justify-content-center align-items-center" style="background: #eeeeee;">
+                    <h1 class="text-black-50">There is no data here <i class="fa fa-frown-o" aria-hidden="true"></i>
+                    </h1>
+                </div>
+            </div>
     @endif
 </div>

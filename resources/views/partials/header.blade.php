@@ -18,11 +18,12 @@
                 <li class="nav-item"><a class="nav-link" target="_blank"
                         href="https://dbapi.org/login">Login</a>
                 </li>
-                {{-- <li class="nav-item"><a
+                <li class="nav-item"><a
                         class="nav-link @if ($title == 'Terms')
                       active
                     @endif"
-                        href="{{ route('terms') }}">Terms</a></li> --}}
+                        href="{{ route('terms') }}">Terms</a>
+                </li>
             </ul>
         </div>
     </div>

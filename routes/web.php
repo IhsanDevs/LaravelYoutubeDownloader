@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
-// Route::get('/terms', function () {
-//     return view('terms', [
-//         'title' => 'Terms'
-//     ]);
-// })->name('terms');
+Route::get('/terms', function () {
+    return view('terms', [
+        'title' => 'Terms'
+    ]);
+})->name('terms');

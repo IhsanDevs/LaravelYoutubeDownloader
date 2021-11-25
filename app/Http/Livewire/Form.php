@@ -9,7 +9,7 @@ use YouTube\YouTubeDownloader;
 
 class Form extends Component
 {
-    public $videoId, $description, $title, $videoLinks = [], $audioLinks, $url = null, $data = [];
+    public $videoId, $description, $title, $videoLinks = [], $otherLinks = [], $audioLinks, $url = null, $data = [];
     protected $listeners = ['download'];
     protected $rules = [
         'url' => [
@@ -22,19 +22,18 @@ class Form extends Component
     {
         try {
             $this->validate();
-            $getVideoInfo = new YouTubeDownloader;
-
-            $getVideoInfo = $getVideoInfo->getDownloadLinks($this->url);
+            $youtube = new YouTubeDownloader;
+            $getVideoInfo = $youtube->getDownloadLinks($this->url);
 
             $this->videoId = $getVideoInfo->getInfo()->getId();
             $this->description = $getVideoInfo->getInfo()->getShortDescription();
             $this->title = $getVideoInfo->getInfo()->getTitle();
+            $this->otherLinks = $getVideoInfo->getAllFormats();
+            // dd($this->otherLinks);
             $videos = $getVideoInfo->getCombinedFormats();
             foreach ($videos as $video) {
                 if (strpos($video->mimeType, 'avc1') !== false) {
-                    $this->videoLinks += [
-                        $video
-                    ];
+                    array_push($this->videoLinks, $video);
                 }
             }
             $this->audioLinks = $getVideoInfo->getAudioFormats();
