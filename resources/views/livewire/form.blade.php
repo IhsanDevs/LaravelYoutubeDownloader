@@ -15,10 +15,16 @@
                         placeholder="https://www.youtube.com/watch?v=xxxxx"><button class="btn btn-primary" type="submit"
                         wire:click='download'><i class="fa fa-download"></i></button>
                 </div>
-                <div wire:loading wire:target='download'></div>
+
                 @error('url')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
+
+                <div class="m-auto mt-4 mb-2 col d-flex justify-content-center col-12">
+                    <div wire:loading wire:target='download'>
+                        <livewire:loading />
+                    </div>
+                </div>
             </form>
         @endif
     </div>

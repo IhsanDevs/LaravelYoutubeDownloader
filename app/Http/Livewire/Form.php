@@ -10,7 +10,7 @@ use YouTube\YouTubeDownloader;
 class Form extends Component
 {
     public $videoId, $description, $title, $videoLinks = [], $audioLinks, $url = null, $data = [];
-
+    protected $listeners = ['download'];
     protected $rules = [
         'url' => [
             'required',
