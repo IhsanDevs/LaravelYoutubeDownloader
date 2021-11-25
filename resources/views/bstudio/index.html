@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>YTMP4 | YTMP3 Downloader</title>
+    <meta name="theme-color" content="#ff00d6">
+    <meta property="og:image" content="https://ytdownloader.dbapi.org/assets/img/youtube.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="Download YouTube videos in MP4 and MP3 formats easily without ads and for free.">
+    <meta name="description" content="Download YouTube videos in MP4 and MP3 formats easily without ads and for free.Download YouTube videos in MP4 and MP3 formats easily without ads and for free.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:title" content="YTMP4 | YTMP3 Downloader">
+    <meta name="twitter:image" content="https://ytdownloader.dbapi.org/assets/img/youtube.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="assets/img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/img/icons/android-chrome-512x512.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/zephyr/bootstrap.min.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-expand-md fixed-top bg-primary" id="top">
+        <div class="container-fluid"><a class="navbar-brand" href="#"><img src="assets/img/icons/android-chrome-512x512.png" width="30" height="30">YTMP4 | YTMP3</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navigation"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navigation">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link" aria-expanded="false" data-bs-toggle="dropdown" href="#">Account&nbsp;</a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">Register</a><a class="dropdown-item" href="#">Login</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="terms.html">Terms</a></li>
+                    <li class="nav-item"></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col col-12">
+                <div class="carousel slide carousel-fade" data-bs-ride="carousel" id="slider">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active"><img class="w-100 d-block" src="assets/img/slider/easy.gif" alt="Slide Image"></div>
+                        <div class="carousel-item"><img class="w-100 d-block" src="assets/img/slider/noAds.gif" alt="Slide Image"></div>
+                        <div class="carousel-item"><img class="w-100 d-block" src="assets/img/slider/noAccount.gif" alt="Slide Image"></div>
+                    </div>
+                    <div><a class="carousel-control-prev" href="#slider" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next" href="#slider" role="button" data-bs-slide="next"><span class="carousel-control-next-icon"></span><span class="visually-hidden">Next</span></a></div>
+                </div>
+            </div>
+            <div class="col col-12">
+                <p class="lead text-center text-muted mt-4" style="font-size: 20px;">Download YouTube videos in MP4 and MP3 formats easily without ads and for free.&nbsp;Enter your youtube video link and choose the format you want.</p>
+            </div>
+            <div class="col d-flex justify-content-center col-12 mb-5"><a class="btn btn-outline-info" role="button" href="https://trakteer.id/ihsan.devs" target="_blank"><i class="fa fa-money"></i>&nbsp;Support Me</a></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <form>
+                    <div class="input-group"><span class="text-primary input-group-text" style="background: rgb(228,228,228);"><i class="fa fa-link"></i></span><input class="form-control" type="text" name="url" autocomplete="off" inputmode="url" pattern="^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$" required="" placeholder="https://www.youtube.com/watch?v=xxxxx"><button class="btn btn-primary" type="submit"><i class="fa fa-download"></i></button></div>
+                </form>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col col-6">
+                <div id="player" data-plyr-provider="youtube" data-plyr-embed-id="fNQ3jt21atY"></div>
+            </div>
+            <div class="col col-6">
+                <ul class="list-unstyled">
+                    <li><strong>Title:&nbsp;</strong>ONE khalifa - Generasi TIK TOK ft RICKO (official lyric video)</li>
+                    <li><strong>Desc:&nbsp;&nbsp;</strong>TIK TOK, OH TIK TOK, BOWO OH BOWO, <br><br>link download : <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbm84VllRUm1MZXgzRkktZ0UzNlRldlR4MnNTUXxBQ3Jtc0ttRmE4MmNBclRzQWdxQ2dtQTQzZm1VNW95T1RoWExQTlAzWFFVOXhFYnc5TkNNUWdfaTZnVUtOcHM1YldXcHJtQTFZQTktSnhVY205bnNERlN5T19qSDRUTG42a0ZsbXZqQ19xS1NhdXF5SXR4MGR6dw&amp;q=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1bfhV0FoPlcYf3jGxZoF1n178SDbVK8xZ%2Fview%3Fusp%3Ddrivesdk" target="_blank">https://drive.google.com/file/d/1bfhV...</a><br><br>Fans page : <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbUN5ZW14aWJ0N0dRc054RjFnZkZ5RnJqM0pCQXxBQ3Jtc0tsNV9xZExxQlc4V0tDeXJ5SHNHOXNaNFo4ZEZiOGNQSHY1ZmUwa0F4RGlJSllNLXVMY1ZwX3RpSDFEZ3dhZXlfQkthWHJSaDNvU1NrY2FGTFZBWXlrWFN0UUhpNUswaC1DX2VhY3B5VHI2TzVNZnc4VQ&amp;q=https%3A%2F%2Fwww.facebook.com%2FOnekhalifa01%2F" target="_blank">https://www.facebook.com/Onekhalifa01/</a><br>instagram : One_khalifa06<br>w.a : 082163818028<br><br><a href="https://www.youtube.com/hashtag/survive">#SURVIVE</a><br><br>PROD : RAV STUDIO <br><br><a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbTRWMU1nVGdZLWhzSHo3VWtITko4ZS1qdlMtZ3xBQ3Jtc0ttYm82UFlyVnQ2UGRBRkpraUhVYmRCMFVHX0p0SnBwSXNqaXBJUS1xZ04ySTU3TVBzUzZOck10TWxiY2NGamtEdFRHMm5zRUVON2ZQbkNhYjIyY0laUmUyX3hFajhqOW9ScVpRWEpFejhUTUtqSFFOYw&amp;q=https%3A%2F%2Fwww.instagram.com%2Frickorav%2F" target="_blank">https://www.instagram.com/rickorav/</a><br><a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqbGxVV3ZscEJyRnBqOUplcDZtbDJmTHBUMGdzQXxBQ3Jtc0tucEFRZFFGU2wxVkwzSmRfN3EtU085aUJkSFNWRmFUeGhZOWdQVXIxSzdkVXZKLW9iYVhPRk5UYTdvR2FHSmZxd1VsaFVHRkhMVzJHd1NSMTV6eDZjRkNKQ3R1VnRobHV4TVpoU24wY0FkU2pZZzJDbw&amp;q=https%3A%2F%2Fwww.facebook.com%2Frico.setiawan.73113" target="_blank">https://www.facebook.com/rico.setiawa...</a><br><br> ©RAV STUDIO 2018</li>
+                </ul>
+                <div class="dropend"><button class="btn btn-success" aria-expanded="false" data-bs-toggle="dropdown" type="button">Download&nbsp;</button>
+                    <div class="dropdown-menu dropdown-menu-dark"><a class="dropdown-item" href="#">Download video</a><a class="dropdown-item" href="#">Download audio</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <footer class="footer-basic">
+                    <div class="social"><a href="https://instagram.com/IhsanDevs" target="_blank"><i class="icon ion-social-instagram"></i></a><a href="https://github.com/IhsanDevs" target="_blank"><i class="icon ion-social-github"></i></a><a href="https://twitter.com/IhsanDevs" target="_blank"><i class="icon ion-social-twitter"></i></a><a href="https://facebook.com/IhsanDeveloper" target="_blank"><i class="icon ion-social-facebook"></i></a></div>
+                    <p class="copyright">Made with&nbsp;<i class="fa fa-heart"></i>&nbsp;by Ihsan Devs</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.plyr.io/3.6.9/plyr.polyfilled.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

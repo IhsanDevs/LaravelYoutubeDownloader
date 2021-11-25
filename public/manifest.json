@@ -1,0 +1,20 @@
+{
+    "short_name": "YTMP4 | YTMP3",
+    "name": "YTMP4 | YTMP3 Downloader",
+    "icons": [
+        {
+            "src": "/assets/img/icons/android-chrome-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/img/icons/android-chrome-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "background_color": "#ff09ba",
+    "theme_color": "#ff00d6",
+    "display": "fullscreen"
+}
