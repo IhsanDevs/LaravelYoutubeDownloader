@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col col-12 d-flex justify-content-center">
         @if (session()->has('message'))
-            <a class="btn btn-success btn-sm" href="{{ route('index') }}" role="button">Download
+            <a class="btn btn-success btn-sm" wire:click='$refresh' role="button">Download
                 again</a>
         @else
             <form wire:submit.prevent='download' class="container-fluid">

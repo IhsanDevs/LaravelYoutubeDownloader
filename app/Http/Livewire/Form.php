@@ -37,7 +37,7 @@ class Form extends Component
                 }
             }
             $this->audioLinks = $getVideoInfo->getAudioFormats();
-            // dd($this->videoLinks);
+            // dd($this->audioLinks);
             $this->data = [
                 'title' => $this->title,
                 'description' => $this->description,
@@ -47,7 +47,8 @@ class Form extends Component
             ];
             // dd($this->data);
             session()->flash('message', 'Successfully to get video information.');
-            return view('index');
+
+            return view('index', $this->data);
             // return redirect()->route('index');
         } catch (YouTubeException $e) {
             session()->flash('error', empty($e->getMessage()) ? 'Failure to get video data.Please check the link you entered.' : $e->getMessage());
@@ -56,20 +57,5 @@ class Form extends Component
     public function render()
     {
         return view('livewire.form');
-    }
-
-    protected function formatBytes($bytes, $precision = 2)
-    {
-        $units = array('B', 'KB', 'MB', 'GB', 'TB');
-
-        $bytes = max($bytes, 0);
-        $pow = floor(($bytes ? log($bytes) : 0) / log(1024));
-        $pow = min($pow, count($units) - 1);
-
-        // Uncomment one of the following alternatives
-        // $bytes /= pow(1024, $pow);
-        // $bytes /= (1 << (10 * $pow));
-
-        return round($bytes, $precision) . ' ' . $units[$pow];
     }
 }
